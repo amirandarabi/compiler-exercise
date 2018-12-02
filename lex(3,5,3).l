@@ -30,6 +30,8 @@ first character is pointed to by yytext,
 and whose length is yyleng, into the
 symbol table and return a pointer
 thereto */
+if(id == {float})
+  id = {double}
 }
 int installNum() {/* similar to installID, but puts numerical
 constants into a separate table */
