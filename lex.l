@@ -1,7 +1,7 @@
 %{
 /* definitions of manifest constants
 LT, LE, EQ, NE, GT, GE,
-IF, THEN, ELSE, ID, NUMBER, RELOP */
+IF, THEN, ELSE, ID, NUMBER, WHILE, RELOP */
 %}
 /* regular definitions */
 delim [ \t\n]
@@ -12,6 +12,7 @@ id {letter}({letter}|{digit})*
 number {digit}+(\.{digit}+)?(E[+-]?{digit}+)?
 %%
 {ws} {/* no action and no return */}
+while {return(WHILE)}
 if {return(IF);}
 then {return(THEN);}
 else {return(ELSE);}
